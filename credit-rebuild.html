@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Rebuild & Score Guidance | Livelong Shield</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/goldman-sans" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/goldman-sans" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Goldman Sans', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    
+    /* Top Bar */
+
+    .top-inner {
+  display: flex;
+  justify-content: space-between; /* Left group + Right link */
+  align-items: center;
+  width: 100%;
+}
+
+/* Left group */
+.top-inner > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Style text */
+.top-bar span,
+.top-bar a {
+  color: #ffffff !important;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.top-bar {
+  background: linear-gradient(90deg, #000, #bfa14a);
+  font-size: 14px;
+  color: #fff;
+  padding: 6px 0;
+}
+.top-bar .top-inner {
+  background: transparent !important;
+  padding: 0;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+.top-bar span,
+.top-bar a {
+  color: #fff !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+.top-bar i {
+  color: #d4af37 !important;
+  margin-right: 6px;
+}
+
+/* Navbar */
+.navbar {
+  background: #000 !important;
+  box-shadow: 0 0 8px rgba(255,215,0,0.2);
+  padding: 12px 0;
+}
+.navbar-brand img {
+  height: 55px !important;
+  filter: brightness(1.1);
+}
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  margin-right: 12px;
+}
+.navbar-nav .nav-link:hover {
+  color: #d4af37 !important;
+}
+.dropdown-menu {
+  background: #000 !important;
+  border: 1px solid rgba(255,215,0,0.2);
+}
+.dropdown-item {
+  color: #fff !important;
+}
+.dropdown-item:hover {
+  background: rgba(212,175,55,0.12);
+  color: #d4af37 !important;
+}
+
+    /* --- Hero Section --- */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/black-gold-abstract.jpg') center/cover no-repeat;
+      text-align: center;
+      padding: 140px 0;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #FFD700;
+    }
+    .hero p {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    /* --- Content Section --- */
+    .content-section {
+      background-color: #111;
+      padding: 70px 0;
+    }
+    .content-section h2 {
+      color: #FFD700;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+    .content-section p, .content-section ul {
+      color: #ddd;
+    }
+
+    /* --- Documents Required --- */
+    .documents {
+      background-color: #000;
+      padding: 60px 0;
+      border-top: 1px solid #222;
+    }
+    .documents h3 {
+      color: #FFD700;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+    .documents ul {
+      list-style: none;
+      padding: 0;
+    }
+    .documents ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #222;
+      color: #ddd;
+    }
+
+    /* --- Enquiry Form --- */
+    .enquiry {
+      background-color: #111;
+      padding: 70px 0;
+    }
+    .enquiry h3 {
+      color: #FFD700;
+      margin-bottom: 25px;
+    }
+    .form-control {
+      background-color: #000;
+      color: #fff;
+      border: 1px solid #444;
+      border-radius: 8px;
+    }
+    .form-control::placeholder {
+      color: #bbb;
+    }
+    .btn-gold {
+      background-color: #FFD700;
+      color: #000;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .btn-gold:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background-color: #000;
+      padding: 50px 0 20px;
+      color: #fff;
+    }
+    footer h5 {
+      color: #FFD700;
+      margin-bottom: 15px;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #FFD700;
+    }
+    .footer-bottom {
+      border-top: 1px solid #222;
+      margin-top: 30px;
+      padding-top: 15px;
+      color: #ccc;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar py-2">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>
+        <i class="bi bi-envelope"></i> livelongshield@gmail.com &nbsp;&nbsp;
+        <i class="bi bi-whatsapp"></i> +91 7353045803
+      </div>
+      <div>
+        <a href="https://www.livelongwealth.in">Corporate Website</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="images/Shield by Livelong-01.png" alt="Livelong Shield Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#">Services</a>
+            <ul class="dropdown-menu bg-dark">
+              <li><a class="dropdown-item text-light" href="cibil-score-improvement.html">CIBIL Score Improvement</a></li>
+              <li><a class="dropdown-item text-light" href="debt-settlement.html">Debt Settlement</a></li>
+              <li><a class="dropdown-item text-light active" href="credit-rebuild.html">Credit Rebuild</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#">Loans</a>
+            <ul class="dropdown-menu bg-dark">
+              <li><a class="dropdown-item text-light" href="personal-loan.html">Personal Loan</a></li>
+              <li><a class="dropdown-item text-light" href="business-loan.html">Business Loan</a></li>
+              <li><a class="dropdown-item text-light" href="home-loan.html">Home Loan</a></li>
+              <li><a class="dropdown-item text-light" href="term-loan.html">Term Loan</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#">Insurance</a>
+            <ul class="dropdown-menu bg-dark">
+              <li><a class="dropdown-item text-light" href="health-insurance.html">Health Insurance</a></li>
+              <li><a class="dropdown-item text-light" href="vehicle-insurance.html">Vehicle Insurance</a></li>
+              <li><a class="dropdown-item text-light" href="life-insurance.html">Life Insurance</a></li>
+            </ul>
+          </li><li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="contact.html">Contact Us</a>
+            <ul class="dropdown-menu bg-dark">
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Credit Rebuild & Score Guidance</h1>
+      <p>Our experts help you improve your credit profile and rebuild financial confidence.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="content-section">
+    <div class="container">
+      <h2>Build Strong Credit for a Secure Financial Future</h2>
+      <p>
+        Credit rebuilding is not just about fixing old issues; it’s about creating strong and sustainable credit habits.
+        At <strong>Livelong Shield</strong>, we provide complete guidance on responsible financial behaviour, loan management,
+        and how to make your credit report a positive reflection of your discipline.
+      </p>
+      <ul class="mt-3">
+        <li>Customized credit rebuild plans</li>
+        <li>Guidance for better repayment history</li>
+        <li>Advice to manage high credit utilization</li>
+        <li>Assistance in removing settled loan effects</li>
+        <li>Support for CIBIL and bank score improvement</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Documents Required -->
+  <section class="documents">
+    <div class="container">
+      <h3>Documents Required</h3>
+      <ul>
+        <li>Full Name</li>
+        <li>Mobile no (as per Aadhaar)</li>
+        <li>Email ID</li>
+        <li>PAN No</li>
+        <li>Date of Birth</li>
+        <li>Pincode</li>
+        <li>Address</li>
+        <li>City</li>
+        <li>Salaried / Self Employed: SELF</li>
+        <li>Amount per month</li>
+        <li>House: Rented / Owned</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Enquiry Form -->
+  <section class="enquiry">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h3>Submit Your Enquiry</h3>
+        <p class="text-light">Our team will contact you to start your Credit Rebuild process.</p>
+      </div>
+      <form id="contactForm" novalidate>
+              <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" name="name" id="name" class="form-control" required minlength="2" maxlength="100">
+                <div class="error-text" id="err-name"></div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" name="email" id="email" class="form-control" required>
+                <div class="error-text" id="err-email"></div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Phone (optional)</label>
+                <input type="tel" name="phone" id="phone" class="form-control" pattern="^\+?[0-9\-\s]{7,20}$">
+                <div class="error-text" id="err-phone"></div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Message</label>
+                <textarea name="message" id="message" class="form-control" rows="5" required minlength="10" maxlength="2000"></textarea>
+                <div class="error-text" id="err-message"></div>
+              </div>
+
+              <div class="mb-3">
+              <label class="form-label">Employment Type</label>
+              <select id="employmentType" name="employmentType" class="form-select">
+              <option value="">Select employment type</option>
+              <option>Salaried — Private</option>
+              <option>Salaried — Government</option>
+              <option>Self Employed — Proprietor</option>
+              <option>Self Employed — Pvt Ltd / LLP / Partnership</option>
+              </select>
+              </div>
+
+              <div class="mb-3">
+              <label class="form-label">City / State</label>
+              <input type="text" id="cityState" name="cityState" class="form-control" placeholder="Bengaluru, Karnataka" required>
+              </div>
+
+
+            <button type="submit" id="submitBtn" class="btn btn-primary">Submit Enquiry</button>
+              <div id="formAlert" class="mt-3"></div>
+            </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="images/Shield by Livelong-01.png" alt="Logo" class="mb-3" style="width:132px; height:73px; object-fit:contain;" class="mb-3">
+          <p><i class="bi bi-geo-alt"></i> Electronic City, Ajmera Nucleus...</p>
+          <p><i class="bi bi-telephone"></i> +91 7353045803</p>
+          <p><i class="bi bi-envelope"></i> livelongshield@gmail.com</p>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Loans</h5>
+          <ul class="list-unstyled">
+            <li><a href="personal-loan.html">Personal Loan</a></li>
+            <li><a href="business-loan.html">Business Loan</a></li>
+            <li><a href="home-loan.html">Home Loan</a></li>
+            <li><a href="term-loan.html">Term Loan</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Insurance</h5>
+          <ul class="list-unstyled">
+            <li><a href="health-insurance.html">Health Insurance</a></li>
+            <li><a href="vehicle-insurance.html">Vehicle Insurance</a></li>
+            <li><a href="life-insurance.html">Life Insurance</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Follow Us</h5>
+        <a href="https://www.facebook.com/livelongwealthkerala/"><i class="bi bi-facebook fs-4 me-2"></i></a>
+        <a href="https://www.linkedin.com/company/livelong-technologies-pvt-ltd/posts/?feedView=all"><i class="bi bi-linkedin fs-4 me-2"></i></a>
+        <a href="https://www.instagram.com/livelong_wealth/?hl=en"><i class="bi bi-instagram fs-4"></i></a>
+      </div>
+      </div>
+      <div class="footer-bottom mt-4">
+        <p>© 2025 Livelong Shield. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+   <!-- ====== Form submission script ====== -->
+    
+ <!-- ====== Personal loan form submission script ====== -->
+ <script>
+  $(function() {
+    function clearErrors() {
+      $('.error-text').text('');
+      $('#contactForm input, #contactForm textarea').removeClass('is-invalid');
+      $('#formAlert').html('');
+    }
+
+    function showError(fieldId, msg) {
+      $('#'+fieldId).addClass('is-invalid');
+      $('#err-' + fieldId.replace('#','')).text(msg);
+    }
+
+    function validateClient() {
+      clearErrors();
+      let ok = true;
+
+     const name = $.trim($('#name').val());
+      const email = $.trim($('#email').val());
+      const phone = $.trim($('#phone').val());
+      const message = $.trim($('#message').val());
+      const employmentType = $.trim($('#employmentType').val());
+      const cityState = $.trim($('#cityState').val());
+
+      if (!name || name.length < 2) {
+        showError('name', 'Please enter your name (min 2 characters).');
+        ok = false;
+      } else if (name.length > 100) {
+        showError('name', 'Name is too long.');
+        ok = false;
+      }
+
+      // simple email regex (client-side only)
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email || !emailRegex.test(email)) {
+        showError('email', 'Please enter a valid email address.');
+        ok = false;
+      }
+
+      if (phone) {
+        const phoneRegex = /^\+?[0-9\-\s]{7,20}$/;
+        if (!phoneRegex.test(phone)) {
+          showError('phone', 'Please enter a valid phone number.');
+          ok = false;
+        }
+      }
+
+      if (!message || message.length < 10) {
+        showError('message', 'Message must be at least 10 characters.');
+        ok = false;
+      } else if (message.length > 2000) {
+        showError('message', 'Message is too long.');
+        ok = false;
+      }
+
+      return ok;
+    }
+
+    $('#contactForm').on('submit', function(e) {
+      e.preventDefault();
+      if (!validateClient()) return;
+
+      $('#submitBtn').prop('disabled', true).text('Sending...');
+
+      $.ajax({
+        url: 'mailer.php',
+        method: 'POST',
+        data: $(this).serialize(),
+        dataType: 'json',
+        success: function(resp) {
+          if (resp && resp.success) {
+            $('#formAlert').html('<div class="alert alert-success">Message sent! Thank you.</div>');
+            $('#contactForm')[0].reset();
+          } else {
+            const msg = (resp && resp.error) ? resp.error : 'Server error — try again later.';
+            $('#formAlert').html('<div class="alert alert-danger">' + msg + '</div>');
+          }
+        },
+        error: function(xhr) {
+          let msg = 'Network or server error.';
+          if (xhr.responseJSON && xhr.responseJSON.error) msg = xhr.responseJSON.error;
+          $('#formAlert').html('<div class="alert alert-danger">' + JSON.parse(xhr) + '</div>');
+        },
+        complete: function() {
+          $('#submitBtn').prop('disabled', false).text('Send Message');
+        }
+      });
+    });
+  });
+  </script>
+  
+</body>
+</html>

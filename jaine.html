@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jaine Sebastian — Equity, Loans & Insurance</title>
+  <meta name="description" content="Professional profile — Equity, Loans, Insurance, Operations. Based in Bengaluru." />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@1,700;1,800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg-1: #040404;           /* premium black */
+      --bg-2: #062816;           /* premium dark green */
+      --silver: silver;          /* exact silver border color */
+      --muted: #99a3a0;
+      --accent: #b8cdb9;
+      --card-bg: rgba(255,255,255,0.02);
+      --rounded: 14px;
+      --maxw: 1100px;
+    }
+
+    /* Basic reset */
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(160deg,var(--bg-1) 10%, var(--bg-2) 100%);color:#eaf2ee;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--maxw);margin:0 auto;padding:28px}
+
+    /* HEADER */
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,#08100b,#0b1a0f);display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.04)}
+    .brand h1{margin:0;font-family:'Playfair Display', serif;font-weight:800;font-style:italic;color:#ffffff;font-size:20px;letter-spacing:0.2px}
+    .brand p{margin:0;color:var(--muted);font-size:13px}
+
+    nav{display:flex;gap:12px;align-items:center}
+    .nav-link{padding:8px 12px;border-radius:10px;font-size:14px;color:var(--muted);border:1px solid transparent}
+    .nav-link:hover{border-color:var(--silver);color:#fff}
+
+    /* HERO / WELCOME */
+    .welcome{
+      margin-top:18px;
+      padding:28px;
+      border-radius:var(--rounded);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02)));
+      border: 1px solid var(--silver);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      display:block;
+      overflow:hidden;
+      position:relative;
+    }
+
+    /* Main heading style requirement: pure white, bold & italic */
+    .welcome h1{
+      color:#ffffff;            /* pure white */
+      font-family:'Playfair Display', serif;
+      font-weight:800;
+      font-style:italic;
+      font-size:36px;
+      margin:0 0 8px 0;
+      line-height:1.05;
+      letter-spacing:0.2px;
+      transform-origin:center;
+      will-change:transform,opacity;
+    }
+
+    /* H3/H4 used for subheadings & descriptions — make them clear */
+    .welcome h3{
+      margin:6px 0 12px 0;
+      font-size:18px;
+      color:#e7f0ea;
+      font-weight:700;
+      font-style:normal;
+    }
+    .welcome h4{
+      margin:6px 0 14px 0;
+      font-size:15px;
+      color:var(--muted);
+      font-weight:600;
+      font-style:normal;
+    }
+
+    .welcome p.lead{
+      margin:12px 0 0 0;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.6;
+      max-width:900px;
+    }
+
+    /* Two-column intro (Left image half-width / Right text content) */
+    .intro-split{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:22px;
+      margin-top:22px;
+      align-items:center;
+    }
+
+    .intro-image{
+      border-radius:12px;
+      overflow:hidden;
+      border:1px solid var(--silver);        /* exact silver border */
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+      box-shadow: 0 8px 25px rgba(0,0,0,0.55);
+      min-height:320px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .intro-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform-origin:center;
+    }
+
+    /* Right column text content (we'll reuse many elements from earlier code) */
+    .intro-text{
+      padding:18px;
+      border-radius:12px;
+      border:1px solid var(--silver);        /* silver borders for boxes */
+      background:var(--card-bg);
+      min-height:320px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.55);
+    }
+
+    .intro-text .mini{
+      color:var(--muted);
+      font-size:13px;
+      font-weight:600;
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:10px;
+      background:rgba(255,255,255,0.01);
+      border:1px solid rgba(255,255,255,0.02);
+      width:max-content;
+    }
+
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+    .btn{
+      padding:10px 14px;border-radius:10px;font-weight:700;background:transparent;border:1px solid var(--silver);color:#fff;cursor:pointer;font-size:14px
+    }
+    .btn.primary{background:linear-gradient(90deg,#9fc49f,#d1e8cf);color:#03130a;border-color:rgba(255,255,255,0.04)}
+    .btn.ghost{background:transparent;color:var(--muted)}
+
+    /* Self-intro subsection (professional bio) */
+    .bio{
+      margin-top:20px;
+      padding:18px;
+      border-radius:12px;
+      border:1px solid var(--silver);
+      background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+      box-shadow: 0 6px 18px rgba(0,0,0,0.55);
+    }
+    .bio h3{margin:0 0 8px 0}
+    .bio p{margin:0;color:var(--muted);line-height:1.6}
+
+    /* Services & Blog sections */
+    .sections{
+      margin-top:26px;
+      display:grid;
+      grid-template-columns: 2fr 1fr;
+      gap:18px;
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+    }
+    .service-box{
+      padding:14px;border-radius:10px;border:1px solid var(--silver);background:var(--card-bg);
+    }
+    .service-box h4{margin:0 0 8px 0;color:#fff;font-weight:700;font-style:italic}
+    .service-box p{margin:0;color:var(--muted);font-size:14px}
+
+    /* Blog column */
+    .blog-panel{
+      padding:14px;border-radius:10px;border:1px solid var(--silver);background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);
+    }
+    .blog-panel h3{margin-top:0;color:#fff;font-weight:800;font-style:italic}
+    .blog-list{display:flex;flex-direction:column;gap:12px;margin-top:10px}
+    .blog-card{padding:12px;border-radius:8px;border:1px solid var(--silver);background:rgba(255,255,255,0.01)}
+    .blog-card h4{margin:0 0 6px 0;font-size:16px;color:#fff;font-weight:700;font-style:italic}
+    .blog-card p{margin:0;color:var(--muted);font-size:13px}
+
+    /* CONTACT / FOOTER */
+    .contact{
+      margin-top:26px;padding:16px;border-radius:12px;border:1px solid var(--silver);background:var(--card-bg);
+      display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start;
+    }
+    .contact .info{flex:1;min-width:220px}
+    .contact .form{flex:1;min-width:300px}
+    input,textarea,select{width:100%;padding:12px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:inherit;font-size:14px}
+    textarea{min-height:120px;resize:vertical}
+
+    footer{margin-top:18px;padding:16px 0;color:var(--muted);text-align:center}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .intro-split{grid-template-columns:1fr}
+      .sections{grid-template-columns:1fr}
+      .services{grid-template-columns:1fr}
+    }
+
+    /* Animations */
+    .animate { opacity:0; transform: translateY(18px) scale(0.995); transition: all 700ms cubic-bezier(.2,.9,.25,1); }
+    .animate.visible { opacity:1; transform: translateY(0) scale(1); }
+
+    /* subtle hover */
+    .service-box:hover, .blog-card:hover, .intro-text:hover { transform: translateY(-6px); transition: transform 220ms ease; box-shadow: 0 12px 30px rgba(0,0,0,0.6); }
+
+    /* focus outlines for accessibility */
+    a:focus, button:focus, input:focus, textarea:focus { outline:2px dashed rgba(255,255,255,0.12); outline-offset:2px; }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <!-- simple monogram -->
+          <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect width="48" height="48" rx="10" fill="#07130a"/>
+            <text x="50%" y="58%" text-anchor="middle" font-family="Playfair Display, serif" font-weight="800" font-style="italic" font-size="20" fill="#dfeee0">JS</text>
+          </svg>
+        </div>
+        <div>
+          <h1>Jaine Sebastian</h1>
+          <p>Equity • Loans • Insurance • Operations — Bengaluru</p>
+        </div>
+      </div>
+
+      <nav>
+        <a class="nav-link" href="#welcome">Welcome</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#blog">Blog</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- WELCOME -->
+    <section id="welcome" class="welcome animate">
+      <h1>Welcome — Practical financial advice, delivered clearly.</h1>
+      <h3>Client-focused advisory in loans, equity and insurance.</h3>
+      <h4>Operationally-minded — results that reduce friction and risk.</h4>
+      <p class="lead">
+        I combine operational expertise with practical financial advisory to help individuals and small businesses secure the right loans,
+        structure portfolios with clarity and choose insurance that actually protects. Below is a short introduction, a quick portfolio of services,
+        client-facing blog content and easy ways to contact me.
+      </p>
+
+      <!-- Two-column split: Left image (half width), Right text content -->
+      <div class="intro-split" style="margin-top:18px;">
+        <div class="intro-image animate">
+          <!-- User image - path provided by you. Place the image file at: images/Gemini_Generated_Image_l0uaakl0uaakl0ua.png -->
+          <img src="images/Gemini_Generated_Image_l0uaakl0uaakl0ua.png" alt="Profile — Jaine Sebastian" onerror="this.style.display='none';">
+        </div>
+
+        <div class="intro-text animate">
+          <span class="mini">Financial operations • Client advisory</span>
+
+          <h3 style="margin-top:8px;color:#fff;font-weight:800;font-style:italic;">I help clients with loans, equity and insurance</h3>
+          <h4>End-to-end support and operational improvements</h4>
+
+          <p style="color:var(--muted);margin-top:8px;line-height:1.6;">
+            I provide practical, documented guidance for loan packaging and lender selection, concise equity guidance tailored to
+            time horizon and risk appetite, and insurance reviews that remove unnecessary cover while preserving protection.
+            My approach is operational: I audit processes, remove manual bottlenecks and implement simple checklists that reduce
+            errors and speed approvals.
+          </p>
+
+          <div class="cta-row" style="margin-top:auto">
+            <a class="btn primary" href="#contact">Book a Free 15-min Consult</a>
+            <a class="btn" href="#services">See Services</a>
+            <a class="btn ghost" id="whLink" href="#">Message on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professional self-introduction -->
+      <div class="bio animate" style="margin-top:18px;">
+        <h3>Professional introduction</h3>
+        <p>
+          <strong>About Jaine:</strong>
+          Operations & Sales professional specialising in the aggregator loan model with deep experience across equity, loans and insurance.
+          Skilled at loan packaging, onboarding workflows, portfolio health checks and operational audits — I help businesses and individuals
+          implement pragmatic process improvements, reduce time-to-approval and improve compliance. Based in Bengaluru, I work with clients
+          to translate complex financial choices into clear, actionable steps.
+        </p>
+      </div>
+    </section>
+
+    <!-- SERVICES & BLOG -->
+    <section class="sections">
+      <div>
+        <h2 id="services" style="color:#fff;font-weight:800;font-style:italic;margin:0 0 12px 0">Services</h2>
+        <div class="services">
+          <div class="service-box animate">
+            <h4>Loan Advisory & Packaging</h4>
+            <p>Documentation checks, lender matching and application support to raise approval probability and improve terms.</p>
+          </div>
+
+          <div class="service-box animate">
+            <h4>Equity Research & Guidance</h4>
+            <p>Actionable, easy-to-follow equity insights and swing-trading basics for clients who want to participate in the markets.</p>
+          </div>
+
+          <div class="service-box animate">
+            <h4>Insurance Review & Planning</h4>
+            <p>Policy reviews to ensure coverage matches needs — eliminating overlap and unnecessary cost while protecting dependents.</p>
+          </div>
+
+          <div class="service-box animate">
+            <h4>Operations & Process Optimization</h4>
+            <p>Onboarding flows, checklists and automation suggestions to cut SLAs and improve client experience.</p>
+          </div>
+        </div>
+
+        <!-- short projects/case studies -->
+        <div style="margin-top:16px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;">
+          <div class="service-box animate">
+            <h4>SME Loan — Case Study</h4>
+            <p>Reduced approval time from 6 weeks to 10 days with documentation standardisation and lender targeting.</p>
+          </div>
+          <div class="service-box animate">
+            <h4>Portfolio Restructure</h4>
+            <p>Rebalanced equity/debt exposure and introduced cost-efficient term cover to protect dependents.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="blog-panel animate" id="blog">
+        <h3>Client blog & resources</h3>
+        <div class="blog-list" aria-live="polite">
+          <article class="blog-card animate">
+            <h4>Swing trading basics: A simple guide</h4>
+            <p>Short notes on how swing trading works, basic risk control and two example trades explained step-by-step.</p>
+          </article>
+
+          <article class="blog-card animate">
+            <h4>How to choose the right term insurance</h4>
+            <p>Checklist and common mistakes when buying a term plan — what matters most and what to ignore.</p>
+          </article>
+
+          <article class="blog-card animate">
+            <h4>Loan documentation checklist</h4>
+            <p>A practical checklist to make sure loan submissions are complete and processed faster by lenders.</p>
+          </article>
+
+          <article class="blog-card animate">
+            <h4>Operational quick wins for loan teams</h4>
+            <p>Three easy process changes that reduce rework and accelerate client onboarding.</p>
+          </article>
+        </div>
+      </aside>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact animate">
+      <div class="info">
+        <h3 style="margin-top:0;color:#fff;font-weight:800;font-style:italic">Get in touch</h3>
+        <p style="color:var(--muted);margin-top:6px">Tell me briefly about your need — loan, portfolio, insurance or operations. I usually reply within 24 hours.</p>
+
+        <div style="margin-top:12px;border-radius:10px;padding:12px;border:1px solid var(--silver);background:rgba(255,255,255,0.01);">
+          <p style="margin:6px 0;color:var(--muted)"><strong>Email:</strong> <a href="mailto:jaineps614@gmail.com" style="color:#fff">jaineps614@gmail.com</a></p>
+          <p style="margin:6px 0;color:var(--muted)"><strong>Phone:</strong> <a href="tel:+91 8078080614" style="color:#fff">+91 80780 80614</a></p>
+          <p style="margin:6px 0;color:var(--muted)"><strong>Location:</strong> Bengaluru, India</p>
+        </div>
+      </div>
+
+      <div class="form">
+        <form id="contactForm" onsubmit="return handleSubmit(event)">
+          <input type="text" id="name" placeholder="Your name" required />
+          <input type="email" id="email" placeholder="Your email" required style="margin-top:8px" />
+          <select id="service" style="margin-top:8px">
+            <option>Loan Advisory</option>
+            <option>Equity Guidance</option>
+            <option>Insurance Review</option>
+            <option>Operations</option>
+            <option>Other</option>
+          </select>
+          <textarea id="message" placeholder="How can I help you?" required style="margin-top:8px"></textarea>
+
+          <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
+            <button type="submit" class="btn primary">Send Message</button>
+            <a class="btn" id="whatsappBtn" href="#" role="button">Message on WhatsApp</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="animate">
+      <div>© <span id="year"></span> Jaine Sebastian — Built with care — Bengaluru</div>
+    </footer>
+  </div>
+
+  <script>
+    // --- small interactive JS: year, whatsapp link, mailto fallback ---
+    (function(){
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Replace with your real phone number (international format, no + or 0s): e.g. 919000000000
+      const phone = '+91 8078080614';
+      const message = encodeURIComponent('Hello Jaine, I would like to discuss...');
+      const waUrl = 'https://wa.me/' + phone.replace(/\\D/g,'') + '?text=' + message;
+      const waBtn = document.getElementById('whatsappBtn');
+      const whLink = document.getElementById('whLink');
+      if(waBtn) waBtn.setAttribute('href', waUrl);
+      if(whLink) whLink.setAttribute('href', waUrl);
+
+      // Contact form: mailto fallback for easy use. Replace with real endpoint when ready.
+      window.handleSubmit = function(e){
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const service = document.getElementById('service').value;
+        const messageText = document.getElementById('message').value.trim();
+        if(!name || !email || !messageText){
+          alert('Please fill all required fields.');
+          return false;
+        }
+        const subject = encodeURIComponent('[Website] ' + service + ' — ' + name);
+        const body = encodeURIComponent('Name: ' + name + '\\nEmail: ' + email + '\\n\\n' + messageText);
+        window.location.href = 'mailto:jaineps614@gmail.com?subject=' + subject + '&body=' + body;
+        return false;
+      };
+    })();
+
+    // --- reveal-on-scroll animations using IntersectionObserver ---
+    (function(){
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(ent=>{
+          if(ent.isIntersecting){
+            ent.target.classList.add('visible');
+            io.unobserve(ent.target);
+          }
+        });
+      }, {threshold: 0.12});
+
+      document.querySelectorAll('.animate').forEach(el => io.observe(el));
+    })();
+  </script>
+</body>
+</html>

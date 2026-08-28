@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blogs | Livelong Shield</title>
+
+  <!-- Bootstrap + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --gold-1:#f7d68d;
+      --gold-2:#d4af37;
+      --gold-3:#a67c1a;
+      --card-dark:rgba(255,255,255,0.03);
+    }
+
+    body{
+      background:linear-gradient(180deg,#050505,#0a0a0a);
+      color:#ddd;
+      font-family:Inter,system-ui;
+    }
+
+    /* TOP BAR */
+    .top-bar{
+      background:linear-gradient(90deg,#000,#bfa14a);
+      padding:6px 0;
+      font-size:14px;
+    }
+    .top-inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      width:100%;
+    }
+    .top-bar span,
+    .top-bar a{
+      color:#fff!important;
+      font-weight:600;
+      text-decoration:none;
+    }
+    .top-bar i{
+      color:#d4af37;
+      margin-right:6px;
+    }
+
+    /* NAVBAR */
+    .navbar{
+      background:#000!important;
+      box-shadow:0 0 8px rgba(255,215,0,.2);
+      padding:12px 0;
+    }
+    .navbar-brand img{
+      height:55px;
+    }
+    .navbar-nav .nav-link{
+      color:#fff!important;
+      font-weight:500;
+      margin-right:12px;
+    }
+    .navbar-nav .nav-link:hover{
+      color:#d4af37!important;
+    }
+    .dropdown-menu{
+      background:#000;
+      border:1px solid rgba(255,215,0,.2);
+    }
+    .dropdown-item{
+      color:#fff!important;
+    }
+    .dropdown-item:hover{
+      background:rgba(212,175,55,.12);
+      color:#d4af37!important;
+    }
+
+    /* HERO */
+    .hero{
+      padding:80px 20px;
+      text-align:center;
+      border-bottom:1px solid rgba(255,255,255,.04);
+    }
+    .hero h1{
+      font-family:Merriweather,serif;
+      color:var(--gold-1);
+      font-size:46px;
+    }
+    .hero p{
+      color:#f2e9d2;
+      font-size:18px;
+    }
+
+    /* BLOG */
+    .blog-section{padding:60px 0;}
+    .blog-card{
+      background:var(--card-dark);
+      border:1px solid rgba(255,255,255,.04);
+      border-radius:14px;
+      overflow:hidden;
+      transition:.2s;
+      height:100%;
+    }
+    .blog-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 18px 40px rgba(0,0,0,.6);
+    }
+    .blog-card img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+    }
+    .blog-content{padding:20px;}
+    .blog-content h5{color:#fff;font-weight:700;}
+    .blog-content p{color:#d8d1b3;font-size:14px;}
+    .blog-meta{font-size:12px;color:#bfae7a;}
+
+    .btn-gold{
+      background:linear-gradient(90deg,var(--gold-1),var(--gold-2),var(--gold-3));
+      border:none;
+      color:#070707;
+      font-weight:700;
+      padding:10px 24px;
+      border-radius:999px;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#050505;
+      padding:44px 0;
+      border-top:1px solid rgba(255,255,255,.04);
+      color:#bfb8a0;
+    }
+    footer a{
+      color:#dcd0a1;
+      text-decoration:none;
+    }
+    footer a:hover{color:var(--gold-1);}
+  </style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-inner">
+      <div>
+        <span><i class="bi bi-envelope"></i> livelongshield@gmail.com</span>
+        <span class="ms-3"><i class="bi bi-whatsapp"></i> +91 7353045803</span>
+      </div>
+      <a href="https://www.livelongwealth.in" target="_blank">Corporate Website</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/Shield by Livelong-01.png">
+    </a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto align-items-center">
+
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="cibil-score-improvement.html">CIBIL Score Improvement</a></li>
+            <li><a class="dropdown-item" href="debt-settlement.html">Debt Settlement</a></li>
+            <li><a class="dropdown-item" href="credit-improvement.html">Credit Improvement</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Loans</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="personal-loan.html">Personal Loan</a></li>
+            <li><a class="dropdown-item" href="business-loan.html">Business Loan</a></li>
+            <li><a class="dropdown-item" href="home-loan.html">Home Loan</a></li>
+            <li><a class="dropdown-item" href="term-loan.html">Term Loan</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Insurance</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="health-insurance.html">Health Insurance</a></li>
+            <li><a class="dropdown-item" href="vehicle-insurance.html">Vehicle Insurance</a></li>
+            <li><a class="dropdown-item" href="life-insurance.html">Life Insurance</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link active" href="blog.html">Blogs</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Blogs & Insights</h1>
+  <p>Expert guidance on loans, credit and smart financial decisions.</p>
+</section>
+
+<!-- BLOGS -->
+<section class="blog-section">
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="blog-card">
+          <img src="images/blog1.jpg">
+          <div class="blog-content">
+            <div class="blog-meta">Home Loan • Jan 2025</div>
+            <h5>How to Get the Best Home Loan Rate</h5>
+            <p>Smart strategies to reduce EMIs and negotiate better interest rates.</p>
+            <a href="blog-read.html" class="btn btn-gold btn-sm">Read More</a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="blog-card">
+          <img src="images/blog2.jpg">
+          <div class="blog-content">
+            <div class="blog-meta">CIBIL Score • Jan 2025</div>
+            <h5>Why CIBIL Score Is Important</h5>
+            <p>Learn how your credit score affects approvals and pricing.</p>
+            <a href="blog-read.html" class="btn btn-gold btn-sm">Read More</a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="blog-card">
+          <img src="images/blog3.jpg">
+          <div class="blog-content">
+            <div class="blog-meta">Finance • Jan 2025</div>
+            <h5>Financial Planning Tips for 2025</h5>
+            <p>Simple steps to stay financially strong and debt-free.</p>
+            <a href="blog-read.html" class="btn btn-gold btn-sm">Read More</a>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-3">
+          <img src="images/Shield by Livelong-01.png" alt="Logo" class="mb-3" style="width:132px; height:73px; object-fit:contain;" class="mb-3">
+          <p><i class="bi bi-geo-alt"></i> Electronic City, Ajmera Nucleus, Ground floor, Bengaluru, Karnataka 560100</p>
+          <p><i class="bi bi-telephone"></i> +91 7353045803</p>
+          <p><i class="bi bi-envelope"></i> livelongshield@gmail.com</p>
+        </div>
+        <div class="col-md-3">
+          <h5>Loans</h5>
+          <ul class="list-unstyled">
+            <li><a href="personal-loan.html">Personal Loan</a></li>
+            <li><a href="business-loan.html">Business Loan</a></li>
+            <li><a href="home-loan.html">Home Loan</a></li>
+            <li><a href="term-loan.html">Term Loan</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Insurance</h5>
+          <ul class="list-unstyled">
+            <li><a href="health-insurance.html">Health Insurance</a></li>
+            <li><a href="vehicle-insurance.html">Vehicle Insurance</a></li>
+            <li><a href="life-insurance.html">Life Insurance</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Follow Us</h5>
+          <a href="https://www.facebook.com/livelongwealthkerala/" class="me-3"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="https://www.linkedin.com/company/livelong-technologies-pvt-ltd/posts/?feedView=all" class="me-3"><i class="bi bi-linkedin fs-4"></i></a>
+          <a href="https://www.instagram.com/livelong_wealth/?hl=en"><i class="bi bi-instagram fs-4"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Livelong Shield. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

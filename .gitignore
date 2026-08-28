@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Environment variables (never commit real credentials)
+.env
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+__MACOSX/
+.vscode/
+*.lnk
+
+# Archives
+*.zip

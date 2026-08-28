@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Personal Loan | Livelong Shield — Premium</title>
+
+  <!-- Bootstrap + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/goldman-sans" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --gold-1: #f7d68d;
+      --gold-2: #d4af37;
+      --gold-3: #a67c1a;
+      --bg-dark: #070707;
+      --card-dark: rgba(255,255,255,0.03);
+    }
+
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;}
+    body{background:linear-gradient(180deg,#050505 0%, #0a0a0a 100%);color:#ddd;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+
+    
+
+     /* Top Bar */
+
+    .top-inner {
+  display: flex;
+  justify-content: space-between; /* Left group + Right link */
+  align-items: center;
+  width: 100%;
+}
+
+/* Left group */
+.top-inner > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Style text */
+.top-bar span,
+.top-bar a {
+  color: #ffffff !important;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.top-bar {
+  background: linear-gradient(90deg, #000, #bfa14a);
+  font-size: 14px;
+  color: #fff;
+  padding: 6px 0;
+}
+.top-bar .top-inner {
+  background: transparent !important;
+  padding: 0;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+.top-bar span,
+.top-bar a {
+  color: #fff !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+.top-bar i {
+  color: #d4af37 !important;
+  margin-right: 6px;
+}
+
+/* Navbar */
+.navbar {
+  background: #000 !important;
+  box-shadow: 0 0 8px rgba(255,215,0,0.2);
+  padding: 12px 0;
+}
+.navbar-brand img {
+  height: 55px !important;
+  filter: brightness(1.1);
+}
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  margin-right: 12px;
+}
+.navbar-nav .nav-link:hover {
+  color: #d4af37 !important;
+}
+.dropdown-menu {
+  background: #000 !important;
+  border: 1px solid rgba(255,215,0,0.2);
+}
+.dropdown-item {
+  color: #fff !important;
+}
+.dropdown-item:hover {
+  background: rgba(212,175,55,0.12);
+  color: #d4af37 !important;
+}
+
+    /* HERO */
+    .hero{
+      position:relative;
+      min-height:420px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:80px 20px;
+      overflow:hidden;
+      border-bottom:1px solid rgba(255,255,255,0.03);
+    }
+    .hero::before{
+      content:"";
+      position:absolute;inset:0;
+      background-image:
+        radial-gradient(circle at 10% 10%, rgba(255,255,255,0.02), transparent 12%),
+        linear-gradient(135deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12)),
+        url('images/welcome-img1.png');
+      background-repeat:repeat,repeat,no-repeat;
+      background-size:200px 200px,200px 200px,cover;
+      opacity:0.22;
+      transform:scale(1.05) translateZ(0);
+      mix-blend-mode:overlay;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;inset:0;
+      background:linear-gradient(90deg, rgba(212,175,55,0.06), rgba(212,175,55,0) 15%, rgba(212,175,55,0.04) 30%, rgba(212,175,55,0) 60%);
+      opacity:0.55;
+      mix-blend-mode:screen;
+      pointer-events:none;
+    }
+    .hero .hero-inner{position:relative;z-index:5;max-width:920px;padding:20px;}
+    .hero h1{font-family:Merriweather, serif;color:var(--gold-1);font-size:48px;margin:0 0 12px;letter-spacing:1px;text-shadow:0 6px 18px rgba(0,0,0,0.6);}
+    .hero p.lead{color:#f2e9d2;font-size:18px;margin-bottom:22px;opacity:0.95;}
+
+    /* GLASS INFO */
+    .info-row{margin-top:-40px;z-index:6;position:relative;}
+    .glass{background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);padding:22px;border-radius:14px;box-shadow:0 10px 40px rgba(0,0,0,0.6);}
+    .glass h3{color:#fff;font-weight:700;margin-bottom:8px;}
+    .glass p{color:#ddd;margin-bottom:0;}
+
+    /* MAIN CONTENT */
+    .main-container{padding:50px 0;color:#e9e9e9;}
+    .card-cta{background:var(--card-dark);border-radius:12px;padding:28px;border:1px solid rgba(255,255,255,0.03);}
+    h2.section-title{color:#fff;font-family:Merriweather,serif;margin-bottom:18px;letter-spacing:0.4px;}
+    p.lead-muted{color:#dcd7cc;opacity:0.95;font-size:17px;}
+    ul.benefits li{margin-bottom:10px;color:#e6dfcf;line-height:1.8;}
+
+    .btn-gold{display:inline-block;background:linear-gradient(90deg,var(--gold-1),var(--gold-2),var(--gold-3));border:none;color:#070707;font-weight:700;padding:12px 28px;border-radius:999px;box-shadow:0 8px 24px rgba(212,175,55,0.18), inset 0 -2px 0 rgba(0,0,0,0.15);transition:transform .18s ease, box-shadow .18s ease;}
+    .btn-gold:hover{transform:translateY(-4px);box-shadow:0 18px 48px rgba(212,175,55,0.20);}
+
+    /* TRUST */
+    .trust{background:#060606;padding:60px 0;color:#fff;border-top:1px solid rgba(255,255,255,0.03);}
+    .trust .stat{font-weight:800;color:var(--gold-1);font-size:32px;margin-bottom:6px;}
+    .trust p.small{color:#cfc7b0;margin:0;font-size:14px;}
+
+    /* CTA strip */
+    .cta-strip{background:linear-gradient(90deg, rgba(212,175,55,0.06), rgba(212,175,55,0.02));padding:48px 0;border-top:1px solid rgba(255,255,255,0.02);border-bottom:1px solid rgba(255,255,255,0.02);}
+    .cta-strip h3{color:#fff;font-family:Merriweather,serif;}
+
+    /* FOOTER */
+    footer{background:#050505;color:#bfb8a0;padding:44px 0;border-top:1px solid rgba(255,255,255,0.03);}
+    footer a{color:#dcd0a1;text-decoration:none;}
+    footer a:hover{color:var(--gold-1);}
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar py-2">
+    <div class="container">
+      <div class="top-inner">
+        <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+          <span><i class="bi bi-envelope"></i> livelongshield@gmail.com</span>
+          <span><i class="bi bi-whatsapp"></i> +91 7353045803</span>
+        </div>
+        <div><a href="https://www.livelongwealth.in" target="_blank">Corporate Website</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="images/Shield by Livelong-01.png" alt="Livelong Shield"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="cibil-score-improvement.html">CIBIL Score Improvement</a></li>
+              <li><a class="dropdown-item" href="debt-settlement.html">Debt Settlement</a></li>
+              <li><a class="dropdown-item" href="credit-improvement.html">Credit Improvement</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Loans</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="personal-loan.html">Personal Loan</a></li>
+              <li><a class="dropdown-item" href="business-loan.html">Business Loan</a></li>
+              <li><a class="dropdown-item" href="home-loan.html">Home Loan</a></li>
+              <li><a class="dropdown-item" href="term-loan.html">Term Loan</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#">Insurance</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="health-insurance.html">Health Insurance</a></li>
+              <li><a class="dropdown-item" href="vehicle-insurance.html">Vehicle Insurance</a></li>
+              <li><a class="dropdown-item" href="life-insurance.html">Life Insurance</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>Personal Loan</h1>
+      <p class="lead">Flexible financing for travel, education, medical expenses, business needs, or lifestyle upgrades — tailored for your comfort.</p>
+      <div class="mt-4">
+        <a href="personal-loan-enquiry.html" class="btn btn-gold me-2">Apply Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- GLASS INFO -->
+  <div class="container info-row">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="glass">
+          <h3>Quick Approvals</h3>
+          <p>Minimal paperwork and faster verification for eligible applicants.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="glass">
+          <h3>Flexible Tenure</h3>
+          <p>Choose repayment terms that suit your financial plan without stress.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="glass">
+          <h3>No Collateral Needed</h3>
+          <p>Access funds without pledging assets, with multiple banks/NBFC options.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-container">
+    <div class="container">
+      <div class="row align-items-start g-5">
+        <div class="col-lg-8">
+          <div class="card-cta">
+            <h2 class="section-title">Your Personal Financing Solution</h2>
+            <p class="lead-muted">A Personal Loan gives you flexible financial support for any purpose — travel, education, medical expenses, business needs, or lifestyle upgrades. Livelong Shield helps you choose the right loan that fits your income, credit score, and repayment comfort — without creating financial stress.</p>
+
+            <hr class="my-4" style="border-color:rgba(255,255,255,0.04)">
+
+            <h4 class="fw-bold">Benefits of Personal Loan with Livelong Shield</h4>
+            <ul class="benefits my-3">
+              <li>Quick approvals and fast disbursal</li>
+              <li>Minimal documentation process</li>
+              <li>Flexible tenure options</li>
+              <li>No collateral required</li>
+              <li>Multiple Bank/NBFC offers to choose from</li>
+            </ul>
+
+            <h4 class="fw-bold mt-3">Documents Required</h4>
+            <ul class="benefits">
+              <li>PAN & Aadhaar</li>
+              <li>3 to 6 months bank statement</li>
+              <li>Latest Salary Slip (Salaried) / ITR (Self Employed)</li>
+            </ul>
+
+            <div id="apply" class="mt-4">
+              <a href="personal-loan-enquiry.html" class="btn btn-gold btn-lg">Apply for Personal Loan</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card-cta">
+            <h5 class="fw-bold">Quick Eligibility Checker</h5>
+            <p style="color:#d8d1b3;margin-bottom:12px;">Estimate your eligibility in seconds.</p>
+            <form onsubmit="event.preventDefault(); alert('We will contact you shortly');" class="row g-2">
+              <div class="col-12">
+                <input class="form-control bg-dark text-light border-0" style="color:#c90d0d;" placeholder="Full name" required>
+              </div>
+              <div class="col-12">
+                <input class="form-control bg-dark text-light border-0" style="color:#d11818;" placeholder="Mobile number" required>
+
+              </div>
+              <div class="col-12">
+                <select class="form-select bg-dark text-light border-0" required>
+                  <option value="">Employment type</option>
+                  <option>Salaried</option>
+                  <option>Self Employed</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-gold w-100">Check Eligibility</button>
+              </div>
+            </form>
+
+            <hr style="border-color:rgba(255,255,255,0.04)">
+
+            <h6 class="fw-bold">Why choose Livelong Shield?</h6>
+            <ul style="color:#d8d1b3">
+              <li>Personalised loan structuring</li>
+              <li>Dedicated relationship manager</li>
+              <li>Legal & documentation assistance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- TRUST -->
+  <section id="why" class="trust">
+    <div class="container text-center">
+      <h3 class="fw-semibold mb-4">Why Indians Trust Livelong Shield</h3>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="stat">10,000+</div>
+          <p class="small">Happy Clients</p>
+        </div>
+        <div class="col-md-3">
+          <div class="stat">₹50+ Cr</div>
+          <p class="small">Loans Facilitated</p>
+        </div>
+        <div class="col-md-3">
+          <div class="stat">4.9 ★</div>
+          <p class="small">Average Rating</p>
+        </div>
+        <div class="col-md-3">
+          <div class="stat">100%</div>
+          <p class="small">Compliant & Transparent</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="cta-strip text-center">
+    <div class="container">
+      <h3>Ready to secure your Personal Loan?</h3>
+      <p style="color:#d8d1b3;margin-bottom:18px;">Our experts will assist you with lender matching, documentation and fast-tracking your application.</p>
+      <a href="contact.html" class="btn btn-gold btn-lg">Speak with a Personal Loan Expert</a>
+    </div>
+  </section>
+
+ <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-3">
+          <img src="images/Shield by Livelong-01.png" alt="Logo" class="mb-3" style="width:132px; height:73px; object-fit:contain;" class="mb-3">
+          <p><i class="bi bi-geo-alt"></i> Electronic City, Ajmera Nucleus, Ground Floor, 424C, Bengaluru, Karnataka 560100</p>
+          <p><i class="bi bi-telephone"></i> +91 7353045803</p>
+          <p><i class="bi bi-envelope"></i> livelongshield@gmail.com</p>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Loans</h5>
+          <ul class="list-unstyled">
+            <li><a href="personal-loan.html">Personal Loan</a></li>
+            <li><a href="business-loan.html">Business Loan</a></li>
+            <li><a href="home-loan.html">Home Loan</a></li>
+            <li><a href="term-loan.html">Term Loan</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Insurance</h5>
+          <ul class="list-unstyled">
+            <li><a href="health-insurance.html">Health Insurance</a></li>
+            <li><a href="vehicle-insurance.html">Vehicle Insurance</a></li>
+            <li><a href="life-insurance.html">Life Insurance</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Follow Us</h5>
+          <a href="https://www.facebook.com/livelongwealthkerala/" target="_blank"><i class="bi bi-facebook fs-4 me-3"></i></a>
+          <a href="https://www.linkedin.com/company/livelong-technologies-pvt-ltd/posts/?feedView=all" target="_blank"><i class="bi bi-linkedin fs-4 me-3"></i></a>
+          <a href="https://www.instagram.com/livelong_wealth/?hl=en" target="_blank"><i class="bi bi-instagram fs-4"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom mt-4">
+        <p>© 2025 Livelong Shield Loans. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

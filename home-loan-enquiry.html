@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Loan Enquiry | Livelong Shield</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/goldman-sans" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+    }
+    .hero {
+      background: url('images/bg-blackgold-abstract.jpg') center/cover no-repeat;
+      padding: 120px 0 80px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      color: #d4af37;
+    }
+    .hero p {
+      color: #ccc;
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+    .btn-gold {
+      background-color: #c9a646;
+      color: #000;
+      border: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .btn-gold:hover {
+      background-color: #e5c76b;
+      color: #000;
+    }
+    .form-control {
+      background-color: #111 !important;
+      color: #fff !important;
+      border: 1px solid #444;
+    }
+    .form-control::placeholder {
+      color: #aaa;
+    }
+    .section-title {
+      color: #d4af37;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .docs-list li {
+      margin-bottom: 8px;
+    }
+
+    /* Top Bar */
+
+    .top-inner {
+  display: flex;
+  justify-content: space-between; /* Left group + Right link */
+  align-items: center;
+  width: 100%;
+}
+
+/* Left group */
+.top-inner > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Style text */
+.top-bar span,
+.top-bar a {
+  color: #ffffff !important;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.top-bar {
+  background: linear-gradient(90deg, #000, #bfa14a);
+  font-size: 14px;
+  color: #fff;
+  padding: 6px 0;
+}
+.top-bar .top-inner {
+  background: transparent !important;
+  padding: 0;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+.top-bar span,
+.top-bar a {
+  color: #fff !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+.top-bar i {
+  color: #d4af37 !important;
+  margin-right: 6px;
+}
+
+/* Navbar */
+.navbar {
+  background: #000 !important;
+  box-shadow: 0 0 8px rgba(255,215,0,0.2);
+  padding: 12px 0;
+}
+.navbar-brand img {
+  height: 55px !important;
+  filter: brightness(1.1);
+}
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  margin-right: 12px;
+}
+.navbar-nav .nav-link:hover {
+  color: #d4af37 !important;
+}
+.dropdown-menu {
+  background: #000 !important;
+  border: 1px solid rgba(255,215,0,0.2);
+}
+.dropdown-item {
+  color: #fff !important;
+}
+.dropdown-item:hover {
+  background: rgba(212,175,55,0.12);
+  color: #d4af37 !important;
+}
+
+
+    /* === FOOTER === */
+    footer {
+      background: #111;
+      color: #fff;
+      padding: 40px 0 20px;
+    }
+    footer h5 {
+      color: #d4af37;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    footer p, footer li, footer a, footer i {
+      color: #fff !important;
+    }
+    footer a {
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    footer a:hover {
+      color: #d4af37 !important;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 20px;
+      padding-top: 10px;
+      text-align: center;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar py-2">
+  <div class="container d-flex justify-content-between align-items-center flex-wrap">
+    <div class="d-flex gap-4 align-items-center small text-light">
+      <span><i class="bi bi-envelope text-gold me-1"></i> livelongshield@gmail.com</span>
+      <span><i class="bi bi-whatsapp text-gold me-1"></i> +91 7353045803</span>
+    </div>
+    <div class="mt-2 mt-md-0">
+      <a href="https://www.livelongwealth.in" target="_blank" class="text-gold fw-semibold text-decoration-none">
+        Corporate Website
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top custom-nav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/Shield by Livelong-01.png" alt="Livelong Shield" height="75">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="cibil-score-improvement.html">CIBIL Score Improvement</a></li>
+            <li><a class="dropdown-item" href="debt-settlement.html">Debt Settlement</a></li>
+            <li><a class="dropdown-item" href="credit-improvement.html">CREDIT Improvement</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Loans</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="personal-loan.html">Personal Loan</a></li>
+            <li><a class="dropdown-item" href="business-loan.html">Business Loan</a></li>
+            <li><a class="dropdown-item" href="home-loan-enquiry.html">Home Loan</a></li>
+            <li><a class="dropdown-item" href="term-loan.html">Term Loan</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Insurance</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="health-insurance.html">Health Insurance</a></li>
+            <li><a class="dropdown-item" href="vehicle-insurance.html">Vehicle Insurance</a></li>
+            <li><a class="dropdown-item" href="life-insurance.html">Life Insurance</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="contact.html" >Contact Us</a>
+          <ul class="dropdown-menu">
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <img src="images/Shield by Livelong-01.png" alt="Livelong Shield" width="140" class="mb-3">
+    <h1>Home Loan Enquiry</h1>
+    <p>Own your dream home with our easy and affordable home loan solutions from top banks.</p>
+  </div>
+</section>
+
+<!-- FORM SECTION -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <h4 class="section-title">Submit Your Enquiry</h4>
+        <form id="contactForm" novalidate>
+              <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" name="name" id="name" class="form-control" required minlength="2" maxlength="100">
+                <div class="error-text" id="err-name"></div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" name="email" id="email" class="form-control" required>
+                <div class="error-text" id="err-email"></div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Phone (optional)</label>
+                <input type="tel" name="phone" id="phone" class="form-control" pattern="^\+?[0-9\-\s]{7,20}$">
+                <div class="error-text" id="err-phone"></div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Message</label>
+                <textarea name="message" id="message" class="form-control" rows="5" required minlength="10" maxlength="2000"></textarea>
+                <div class="error-text" id="err-message"></div>
+              </div>
+
+              <div class="mb-3">
+              <label class="form-label">Monthly Income</label>
+              <input type="text" id="monthlyIncome" name="monthlyIncome" class="form-control" placeholder="e.g. ₹50,000">
+              </div>
+
+              <div class="mb-3">
+              <label class="form-label">CIBIL Score (approx)</label>
+              <input type="text" id="cibilScore" name="cibilScore" class="form-control" placeholder="e.g. 720">
+              </div>
+
+              <div class="mb-3">
+              <label class="form-label">Loan Amount Required</label>
+              <input type="text" id="loanAmount" name="loanAmount" class="form-control" placeholder="e.g. ₹5,00,000" required>
+              </div>
+
+              <div class="mb-3">
+              <label class="form-label">Employment Type</label>
+              <select id="employmentType" name="employmentType" class="form-select">
+              <option value="">Select employment type</option>
+              <option>Salaried — Private</option>
+              <option>Salaried — Government</option>
+              <option>Self Employed — Proprietor</option>
+              <option>Self Employed — Pvt Ltd / LLP / Partnership</option>
+              </select>
+              </div>
+
+              <div class="mb-3">
+              <label class="form-label">City / State</label>
+              <input type="text" id="cityState" name="cityState" class="form-control" placeholder="Bengaluru, Karnataka" required>
+              </div>
+
+
+            <button type="submit" id="submitBtn" class="btn btn-primary">Submit Enquiry</button>
+              <div id="formAlert" class="mt-3"></div>
+            </form>
+
+      <div class="col-lg-5">
+        <h4 class="section-title">Documents You May Need</h4>
+        <ul class="docs-list">
+          <li>PAN & Aadhaar of Applicant / Co-Applicant</li>
+          <li>Income Proof (Salary Slip / ITR)</li>
+          <li>Bank Statement (Last 6 months)</li>
+          <li>Property Documents & Sale Agreement</li>
+          <li>Employment Proof / Business Proof</li>
+          <li>Address Proof of Residence</li>
+        </ul>
+
+        <div class="mt-4">
+          <h5 class="section-title">Eligibility Highlights</h5>
+          <ul class="docs-list">
+            <li>Loan amount up to ₹5 Crores</li>
+            <li>Flexible repayment up to 30 years</li>
+            <li>Low interest rates from leading banks</li>
+            <li>Balance transfer & top-up available</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-3">
+        <img src="images/Shield by Livelong-01.png" alt="Logo" class="mb-3" style="width:132px; height:73px; object-fit:contain;" class="mb-3">
+        <p><i class="bi bi-geo-alt"></i> Electronic City, Ajmera Nucleus, Ground Floor, 424C, Bengaluru, Karnataka 560100</p>
+        <p><i class="bi bi-telephone"></i> +91 7353045803</p>
+        <p><i class="bi bi-envelope"></i> livelongshield@gmail.com</p>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Loans</h5>
+        <ul class="list-unstyled">
+          <li><a href="personal-loan.html">Personal Loan</a></li>
+          <li><a href="business-loan.html">Business Loan</a></li>
+          <li><a href="home-loan-enquiry.html">Home Loan</a></li>
+          <li><a href="term-loan.html">Term Loan</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Insurance</h5>
+        <ul class="list-unstyled">
+          <li><a href="health-insurance.html">Health Insurance</a></li>
+          <li><a href="vehicle-insurance.html">Vehicle Insurance</a></li>
+          <li><a href="life-insurance.html">Life Insurance</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Follow Us</h5>
+        <a href="https://www.facebook.com/livelongwealthkerala/" target="_blank"><i class="bi bi-facebook fs-4 me-3"></i></a>
+        <a href="https://www.linkedin.com/company/livelong-technologies-pvt-ltd/posts/?feedView=all" target="_blank"><i class="bi bi-linkedin fs-4 me-3"></i></a>
+        <a href="https://www.instagram.com/livelong_wealth/?hl=en" target="_blank"><i class="bi bi-instagram fs-4"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom mt-4">
+      <p>© 2025 Livelong Shield Loans. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- ====== Form submission script ====== -->
+ <!-- ====== Personal loan form submission script ====== -->
+ <script>
+  $(function() {
+    function clearErrors() {
+      $('.error-text').text('');
+      $('#contactForm input, #contactForm textarea').removeClass('is-invalid');
+      $('#formAlert').html('');
+    }
+
+    function showError(fieldId, msg) {
+      $('#'+fieldId).addClass('is-invalid');
+      $('#err-' + fieldId.replace('#','')).text(msg);
+    }
+
+    function validateClient() {
+      clearErrors();
+      let ok = true;
+
+      const name = $.trim($('#name').val());
+      const email = $.trim($('#email').val());
+      const phone = $.trim($('#phone').val());
+      const message = $.trim($('#message').val());
+      const monthlyIncome = $.trim($('#monthlyIncome').val());
+      const cibilScore = $.trim($('#cibilScore').val());
+      const loanAmount = $.trim($('#loanAmount').val());
+      const employmentType = $.trim($('#employmentType').val());
+      const cityState = $.trim($('#cityState').val());
+
+      if (!name || name.length < 2) {
+        showError('name', 'Please enter your name (min 2 characters).');
+        ok = false;
+      } else if (name.length > 100) {
+        showError('name', 'Name is too long.');
+        ok = false;
+      }
+
+      // simple email regex (client-side only)
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email || !emailRegex.test(email)) {
+        showError('email', 'Please enter a valid email address.');
+        ok = false;
+      }
+
+      if (phone) {
+        const phoneRegex = /^\+?[0-9\-\s]{7,20}$/;
+        if (!phoneRegex.test(phone)) {
+          showError('phone', 'Please enter a valid phone number.');
+          ok = false;
+        }
+      }
+
+      if (!message || message.length < 10) {
+        showError('message', 'Message must be at least 10 characters.');
+        ok = false;
+      } else if (message.length > 2000) {
+        showError('message', 'Message is too long.');
+        ok = false;
+      }
+
+      return ok;
+    }
+
+    $('#contactForm').on('submit', function(e) {
+      e.preventDefault();
+      if (!validateClient()) return;
+
+      $('#submitBtn').prop('disabled', true).text('Sending...');
+
+      $.ajax({
+        url: 'mailer.php',
+        method: 'POST',
+        data: $(this).serialize(),
+        dataType: 'json',
+        success: function(resp) {
+          if (resp && resp.success) {
+            $('#formAlert').html('<div class="alert alert-success">Message sent! Thank you.</div>');
+            $('#contactForm')[0].reset();
+          } else {
+            const msg = (resp && resp.error) ? resp.error : 'Server error — try again later.';
+            $('#formAlert').html('<div class="alert alert-danger">' + msg + '</div>');
+          }
+        },
+        error: function(xhr) {
+          let msg = 'Network or server error.';
+          if (xhr.responseJSON && xhr.responseJSON.error) msg = xhr.responseJSON.error;
+          $('#formAlert').html('<div class="alert alert-danger">' + JSON.parse(xhr) + '</div>');
+        },
+        complete: function() {
+          $('#submitBtn').prop('disabled', false).text('Send Message');
+        }
+      });
+    });
+  });
+  </script>
+</body>
+</html>

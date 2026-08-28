@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Debt Settlement | Livelong Shield — Premium</title>
+
+  <!-- Bootstrap + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/goldman-sans" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --gold-1: #f7d68d;
+      --gold-2: #d4af37;
+      --gold-3: #a67c1a;
+      --bg-dark: #070707;
+      --card-dark: rgba(255,255,255,0.03);
+    }
+
+    /* Page base */
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;}
+    body{background:linear-gradient(180deg,#050505 0%, #0a0a0a 100%);color:#ddd;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+
+   
+    /* Top Bar */
+    .top-inner {
+  display: flex;
+  justify-content: space-between; /* Left group + Right link */
+  align-items: center;
+  width: 100%;
+}
+
+/* Left group */
+.top-inner > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Style text */
+.top-bar span,
+.top-bar a {
+  color: #ffffff !important;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.top-bar {
+  background: linear-gradient(90deg, #000, #bfa14a);
+  font-size: 14px;
+  color: #fff;
+  padding: 6px 0;
+}
+.top-bar .top-inner {
+  background: transparent !important;
+  padding: 0;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+.top-bar span,
+.top-bar a {
+  color: #fff !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+.top-bar i {
+  color: #d4af37 !important;
+  margin-right: 6px;
+}
+
+/* Navbar */
+.navbar {
+  background: #000 !important;
+  box-shadow: 0 0 8px rgba(255,215,0,0.2);
+  padding: 12px 0;
+}
+.navbar-brand img {
+  height: 55px !important;
+  filter: brightness(1.1);
+}
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  margin-right: 12px;
+}
+.navbar-nav .nav-link:hover {
+  color: #d4af37 !important;
+}
+.dropdown-menu {
+  background: #000 !important;
+  border: 1px solid rgba(255,215,0,0.2);
+}
+.dropdown-item {
+  color: #fff !important;
+}
+.dropdown-item:hover {
+  background: rgba(212,175,55,0.12);
+  color: #d4af37 !important;
+}
+
+
+    /* HERO — black gradient + geometric gold-pattern */
+    .hero{
+      position:relative;
+      min-height:420px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:80px 20px;
+      overflow:hidden;
+      border-bottom:1px solid rgba(255,255,255,0.03);
+      background:url('images/debt-hero.jpg') center/cover no-repeat;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;inset:0;
+      background-image:
+        radial-gradient(circle at 10% 10%, rgba(255,255,255,0.02), transparent 12%),
+        linear-gradient(135deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12)),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="%23d4af37"/><stop offset="1" stop-color="%23a67c1a"/></linearGradient></defs><g fill="none" stroke="%23d4af37" stroke-opacity="0.06" stroke-width="1"><path d="M0 50 L200 50 M0 100 L200 100 M0 150 L200 150 M50 0 L50 200 M100 0 L100 200 M150 0 L150 200"/></g></svg>');
+      background-repeat:repeat;
+      background-size:200px 200px, cover, 200px 200px;
+      opacity:0.22;
+      transform:scale(1.05) translateZ(0);
+      mix-blend-mode:overlay;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;inset:0;
+      background:linear-gradient(90deg, rgba(212,175,55,0.06), rgba(212,175,55,0.02));
+      opacity:0.55;
+      mix-blend-mode:screen;
+      pointer-events:none;
+    }
+    .hero .hero-inner{position:relative;z-index:5;max-width:920px;padding:20px;}
+    .hero h1{font-family:Merriweather, serif;color:var(--gold-1);font-size:48px;margin:0 0 12px;letter-spacing:1px;text-shadow:0 6px 18px rgba(0,0,0,0.6);}
+    .hero p.lead{color:#f2e9d2;font-size:18px;margin-bottom:22px;opacity:0.95;}
+
+    /* MAIN content */
+    .main-container{padding:50px 0;color:#e9e9e9;}
+    .card-cta{background:var(--card-dark);border-radius:12px;padding:28px;border:1px solid rgba(255,255,255,0.03);}
+    h2.section-title{color:#fff;font-family:Merriweather,serif;margin-bottom:18px;letter-spacing:0.4px;}
+    p.lead-muted{color:#dcd7cc;opacity:0.95;font-size:17px;}
+    ul.benefits li{margin-bottom:10px;color:#e6dfcf;line-height:1.8;}
+
+    /* GOLD gradient button */
+    .btn-gold{
+      display:inline-block;
+      background:linear-gradient(90deg,var(--gold-1),var(--gold-2),var(--gold-3));
+      border:none;color:#070707;font-weight:700;padding:12px 28px;border-radius:999px;
+      box-shadow:0 8px 24px rgba(212,175,55,0.18), inset 0 -2px 0 rgba(0,0,0,0.15);
+      transition:transform .18s ease, box-shadow .18s ease;
+      text-decoration:none;
+    }
+    .btn-gold:hover{transform:translateY(-4px);box-shadow:0 18px 48px rgba(212,175,55,0.20);}
+
+    /* TRUST section (dark) */
+    .trust{background:#060606;padding:60px 0;color:#fff;border-top:1px solid rgba(255,255,255,0.03);}
+    .trust .stat{font-weight:800;color:var(--gold-1);font-size:32px;margin-bottom:6px;}
+    .trust p.small{color:#cfc7b0;margin:0;font-size:14px;}
+
+    /* Footer */
+    footer{background:#050505;color:#bfb8a0;padding:44px 0;border-top:1px solid rgba(255,255,255,0.03);}
+    footer a{color:#dcd0a1;text-decoration:none;}
+    footer a:hover{color:var(--gold-1);}
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar py-2">
+    <div class="container">
+      <div class="top-inner">
+        <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+          <span><i class="bi bi-envelope"></i> livelongshield@gmail.com</span>
+          <span><i class="bi bi-whatsapp"></i> +91 7353045803</span>
+        </div>
+        <div><a href="https://www.livelongwealth.in" target="_blank">Corporate Website</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="images/Shield by Livelong-01.png" alt="Livelong Shield"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="color:#fff;"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="cibil-score-improvement.html">CIBIL Score Improvement</a></li>
+              <li><a class="dropdown-item active" href="debt-settlement.html">Debt Settlement</a></li>
+              <li><a class="dropdown-item" href="credit-improvement.html">Credit Improvement</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Loans</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="personal-loan.html">Personal Loan</a></li>
+              <li><a class="dropdown-item" href="business-loan.html">Business Loan</a></li>
+              <li><a class="dropdown-item" href="home-loan.html">Home Loan</a></li>
+              <li><a class="dropdown-item" href="term-loan.html">Term Loan</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Insurance</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="health-insurance.html">Health Insurance</a></li>
+              <li><a class="dropdown-item" href="vehicle-insurance.html">Vehicle Insurance</a></li>
+              <li><a class="dropdown-item" href="life-insurance.html">Life Insurance</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>Debt Settlement</h1>
+      <p class="lead">Reduce your outstanding burden & get financial breathing space.</p>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-container">
+    <div class="container">
+      <div class="card-cta">
+        <h2 class="section-title">Practical & Legal Debt Settlement Strategy</h2>
+        <p class="lead-muted">When EMI payments delay or credit card bills become difficult to handle, Debt Settlement is a legally accepted process to negotiate and close your total outstanding for a reduced amount.</p>
+        <p class="lead-muted">At <strong>Livelong Shield</strong>, we negotiate on your behalf with banks / NBFCs to reduce penalty, overdue interest, and final payable settlement amount.</p>
+        <h4 class="fw-bold mt-3">We Support Settlement For:</h4>
+        <ul class="benefits">
+          <li>Overdue Personal Loans</li>
+          <li>Credit Card Overdues</li>
+          <li>High Penalty Accounts</li>
+          <li>Bounce Charges & Interest Waiver</li>
+          <li>Final NOC & Closure Support</li>
+        </ul>
+        <a href="debt-settlement-enquiry.html" class="btn btn-gold mt-3">Talk to Debt Settlement Expert</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- TRUST -->
+  <section class="trust">
+    <div class="container text-center">
+      <h3 class="fw-semibold mb-4">Why Indians Trust Livelong Shield</h3>
+      <div class="row g-4">
+        <div class="col-md-3"><div class="stat">19+</div><p class="small">Partner Banks & NBFCs</p></div>
+        <div class="col-md-3"><div class="stat">7+ Years</div><p class="small">Finance Expertise</p></div>
+        <div class="col-md-3"><div class="stat">4000+</div><p class="small">Clients Guided</p></div>
+        <div class="col-md-3"><div class="stat">96%</div><p class="small">Case Resolution Success</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <img src="images/Shield by Livelong-01.png" alt="Logo" class="mb-3" style="width:132px; height:73px; object-fit:contain;" class="mb-3">
+          <p><i class="bi bi-geo-alt"></i> Electronic City, Ajmera Nucleus, Ground Floor, 424C, Bengaluru, Karnataka 560100</p>
+          <p><i class="bi bi-telephone"></i> +91 7353045803</p>
+          <p><i class="bi bi-envelope"></i> livelongshield@gmail.com</p>
+        </div>
+        <div class="col-md-2">
+          <h6 style="color:#fff;">Loans</h6>
+          <ul class="list-unstyled">
+            <li><a href="personal-loan.html">Personal Loan</a></li>
+            <li><a href="business-loan.html">Business Loan</a></li>
+            <li><a href="home-loan.html">Home Loan</a></li>
+            <li><a href="term-loan.html">Term Loan</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 style="color:#fff;">Insurance</h6>
+          <ul class="list-unstyled">
+            <li><a href="health-insurance.html">Health Insurance</a></li>
+            <li><a href="vehicle-insurance.html">Vehicle Insurance</a></li>
+            <li><a href="life-insurance.html">Life Insurance</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 style="color:#fff;">Follow Us</h6>
+          <a href="https://www.facebook.com/livelongwealthkerala/" class="me-3"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="https://www.linkedin.com/company/livelong-technologies-pvt-ltd/posts/?feedView=all" class="me-3"><i class="bi bi-linkedin fs-4"></i></a>
+          <a href="https://www.instagram.com/livelong_wealth/?hl=en"><i class="bi bi-instagram fs-4"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom text-center mt-4">
+        <p style="color:#9f9471;">© 2025 Livelong Shield. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
